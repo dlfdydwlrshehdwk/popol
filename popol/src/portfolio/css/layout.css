@@ -1,0 +1,13 @@
+.layout_header_ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 90px;
+    align-items: center;
+}
+.main_flexwrap{
+    display: flex;
+}
+.main_flex_item{
+    width: 400px;
+}
