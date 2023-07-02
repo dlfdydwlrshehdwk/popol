@@ -1,6 +1,9 @@
 import { Link, Outlet } from 'react-router-dom';
 import "./css/layout.css"
-
+import $ from 'jquery'
+function aa(){
+    console.log($('.menu'))
+}
 function Layout(){
     return(
         <>
@@ -10,7 +13,7 @@ function Layout(){
                         <li>
                             <Link to="/main">로고</Link>
                         </li>
-                        <li>
+                        <li className='menu'>
                             <div>
                                 메뉴탭
                             </div>
@@ -18,7 +21,7 @@ function Layout(){
                     </ul>
                 </nav>
             </header>
-            <main>
+            <main id='main'>
                 <Outlet />
             </main>
             <footer id='footer'>

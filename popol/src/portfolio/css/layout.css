@@ -5,9 +5,10 @@
     height: 90px;
     align-items: center;
 }
-.main_flexwrap{
+
+#footer{
+    height: 100px;
     display: flex;
-}
-.main_flex_item{
-    width: 400px;
+    justify-content: center;
+    align-items: center;
 }

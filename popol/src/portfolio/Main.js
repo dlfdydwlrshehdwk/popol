@@ -1,5 +1,11 @@
-
+import React, { useEffect } from 'react';
+import './css/main.css';
+import $ from 'jquery'
 function Main(){
+
+    useEffect(()=>{
+    },[])
+
     return(
         <>
             <section className='main_wrap'>
