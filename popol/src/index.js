@@ -12,10 +12,10 @@ export default function App(){
 
   useEffect(()=>{
     $(window).on('wheel',function(e){
-      let a = e.deltaY
+      let a = e.originalEvent.wheelDelta
       console.log(a)
     })
-  })
+  },[])
   return(
 
     <HashRouter>
