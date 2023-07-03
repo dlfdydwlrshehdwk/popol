@@ -1,0 +1,14 @@
+.layout_header_ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 90px;
+    align-items: center;
+}
+
+#footer{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
