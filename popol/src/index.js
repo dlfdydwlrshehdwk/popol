@@ -10,23 +10,31 @@ import $ from 'jquery'
 
 export default function App(){
 
+
+  function changeBg(){
+      console.log('화면변경')
+      // console.log()
+  }
+
+
   useEffect(()=>{
+    let i =0;
     $(window).on('wheel',function(e){
       let a = e.originalEvent.wheelDelta
-      let i = 0;
+      
       // console.log(a)
 
       if(a < 0){
         console.log('밑으로')
-        i++
+        i++;
         // 만약 ul을 100으로 나눈숫자보다 커진다면 그숫자+1 보다 작게
-        console.log($('.main_flexwrap').innerWidth())
-        let c = $('.main_flexwrap').innerWidth() / 100
+        console.log($('.main_flexwrap'))
+        let c = $('.main_flexwrap').innerWidth() / 100 - $('.main_flexwrap').innerWidth() / 100 / 10
         if(i > c) i = c;
       }
       else{
         console.log('위로')
-        i--
+        i--;
         // 만약 i가 0보다 작아진다면 i는 0
         if(i < 0) i = 0;
       }
@@ -34,11 +42,11 @@ export default function App(){
 
       console.log(i)
 
-      
+
       // 트랜스폼을 i * 100px로 셋팅 
       $('.main_flexwrap').css({
-        transition : '.1s',
-        transform : `translate(${(i * 100) + 'px'},-50%)`
+        transition : '.1s linear ',
+        transform : `translate(${(i * -100) + 'px'},-50%)`
         
       })
       // 부드럽게는 어떻게? .1초마다 ? <- ? 
