@@ -1,12 +1,17 @@
 .main_flexwrap{
     display: flex;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25%;
 }
 .main_flex_item{
     width: 40vh;
     height: 40vh;
 }
-#main{
-    min-height: calc(100vh - 190px);
+.main_flex_item{
+    border: 1px solid #000;
+    margin-right: 10vh;
 }
+
 
