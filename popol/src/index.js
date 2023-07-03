@@ -31,6 +31,10 @@ export default function App(){
         if(i < 0) i = 0;
       }
 
+
+      console.log(i)
+
+      
       // 트랜스폼을 i * 100px로 셋팅 
       $('.main_flexwrap').css({
         transition : '.1s',
