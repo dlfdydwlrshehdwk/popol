@@ -22,17 +22,17 @@ const pofoldata = [
     },
     {
         idx : '4',
-        title : '자동차',
+        title : 'PESCARO',
         address : '',
         language : 'JavaScript & HTML & CSS',
         isrc : "./../images/bg/pescaro.jpg",
     },
     {
         idx : '5',
-        title : '사이트소개사이트',
+        title : 'VITA ARCHITECTURE',
         address : '',
         language : 'Vue.js',
-        isrc : "./../images/bg/v.jpg",
+        isrc : "./../images/bg/vita.jpg",
     },
     {
         idx : '6',

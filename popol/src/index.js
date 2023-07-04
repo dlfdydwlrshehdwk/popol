@@ -52,6 +52,11 @@ export default function App(){
       // 부드럽게는 어떻게? .1초마다 ? <- ? 
     })
   },[])
+
+
+ 
+
+
   return(
 
     <HashRouter>

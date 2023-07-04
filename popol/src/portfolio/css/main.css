@@ -19,9 +19,10 @@
     position: absolute;
     bottom: 10%;
     left: 50%;
+    color: white;
     transform: translateX(-50%);
-    border: 2px solid;
-    background: white;
+    border: 2px solid white;
+    background: transparent;
     border-radius: 30px;
     padding: 3% 7%;
     box-sizing: border-box;
@@ -39,7 +40,7 @@
     margin-top : 3%;
 }
 .main_flex_item p{
-    font-size: 5vh;
+    font-size: 4.5vh;
     margin-top: 10%;
     font-weight: bold;
     color: white;

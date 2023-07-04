@@ -4,9 +4,22 @@ import $ from 'jquery'
 import pofoldata from './data/pofoldata';
 function Main(){
 
+    let [img , setImg] = useState(0)
+
+
     let [bg , setBg] = useState(0)
     useEffect(()=>{
     },[])
+
+    useEffect(()=>{
+        $('.bg').css({transition : 'none', opacity : 0.6 })
+        setTimeout(()=>{
+        $('.bg').css({
+            transition : "1s linear",
+            opacity : 1
+        })
+        },10)
+    },[img])
 
     return(
         <>
@@ -15,7 +28,7 @@ function Main(){
                     {
                         // console.log(pofoldata)
                         pofoldata.map((x,i)=>
-                        <li key={i} className='main_flex_item' onMouseOver={()=>{console.log($('.main_wrap'),x.idx)}}>
+                        <li key={i} className='main_flex_item' onMouseOver={()=>{setImg(i)}}>
                             <h4>{x.language}</h4>
                             <p>{x.title}</p>
                             <button onClick={()=>{window.open(x.address)}}>View Project</button>
@@ -24,7 +37,7 @@ function Main(){
                     }
                 </ul>
                 <div className='bg'>
-                    <img src={pofoldata[1].isrc}/>
+                    <img src={pofoldata[img].isrc}/>
                 </div>
             </section>
         </>
