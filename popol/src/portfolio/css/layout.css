@@ -29,3 +29,39 @@
     justify-content: center;
     align-items: center;
 }
+
+
+
+/* 슬라이드사이드바 */
+/* 슬라이드 겉박 */
+.side{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.side ul{
+    color : white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    height: 100vh;
+    transform: translate(-50%,-50%);
+    border: 1px solid silver;
+    display: flex;
+    flex-direction: column;
+}
+.side ul li{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.side ul li div:first-child{
+    width: 50%;
+}
+.side ul li div:last-child{
+    width: 50%;
+}

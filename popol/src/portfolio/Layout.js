@@ -29,6 +29,22 @@ function Layout(){
             <footer id='footer'>
                 푸터야!
             </footer>
+            <aside className='side'>
+                <ul>
+                    <li>
+                        <div>소개글</div>
+                        <div>＋</div>
+                    </li>
+                    <li>
+                        <div>나의 기술</div>
+                        <div>＋</div>
+                    </li>
+                    <li>
+                        <div>연락처</div>
+                        <div>＋</div>
+                    </li>
+                </ul>
+            </aside>
         </>
     )
 }
