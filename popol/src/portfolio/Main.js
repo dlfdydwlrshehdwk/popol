@@ -24,7 +24,7 @@ function Main(){
                     }
                 </ul>
                 <div className='bg'>
-                    <img src='../../images/bg/fila.png'/>
+                    <img src={pofoldata[1].isrc}/>
                 </div>
             </section>
         </>
