@@ -10,12 +10,14 @@ function Layout(){
             <header>
                 <nav>
                     <ul className='layout_header_ul'>
-                        <li>
-                            <Link to="/main">로고</Link>
+                        <li className='logo'>
+                            <Link to="/main">
+                                <img src='./../images/logo.png'/>
+                            </Link>
                         </li>
                         <li className='menu'>
                             <div>
-                                메뉴탭
+                                MENU
                             </div>
                         </li>
                     </ul>

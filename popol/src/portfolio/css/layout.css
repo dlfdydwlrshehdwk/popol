@@ -5,7 +5,20 @@
     height: 90px;
     align-items: center;
 }
-
+.layout_header_ul img{
+    width: 100%;
+    height: 100%;
+}
+.logo{
+        width: 70px;
+        padding-top: 90px;
+}
+.menu{
+    color: white;
+    font-weight: bold;
+    font-size: 2.5vh;
+    padding-top: 45px;
+}
 #footer{
     position: absolute;
     left: 0;
