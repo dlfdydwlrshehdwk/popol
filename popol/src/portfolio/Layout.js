@@ -103,6 +103,7 @@ function Layout(){
                             <div className='txtbx'>
                                 <p>저는 그린컴퓨터 수료 어쩌구</p>
                                 <p>이정도 할줄암 어쩌구</p>
+                                <p>잡코리아주소</p>
                             </div>
                         }
                     </li>
