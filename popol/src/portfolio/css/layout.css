@@ -47,21 +47,35 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50vw;
-    height: 100vh;
+    width: 50%;
+    height: 100%;
     transform: translate(-50%,-50%);
     border: 1px solid silver;
-    display: flex;
-    flex-direction: column;
+    padding: 5% 5%;
+    box-sizing: border-box;
 }
-.side ul li{
-    display: flex;
+.side ul li {
+    font-size: 3vw;
     justify-content: space-around;
-    text-align: center;
 }
-.side ul li div:first-child{
+.side ul li div div:first-child{
     width: 50%;
 }
-.side ul li div:last-child{
+.side ul li div div:last-child{
     width: 50%;
+    text-align: right;
+}
+.flexbx{
+    display: flex;
+}
+.side li:last-child{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1vw;
+}
+.txtbx{
+    font-size: 1.5vw;
+    margin: 2% 0;
 }
