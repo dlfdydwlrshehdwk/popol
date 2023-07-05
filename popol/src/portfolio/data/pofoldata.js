@@ -13,7 +13,7 @@ const pofoldata = [
         address : '',
         language : 'Vue.js',
         isrc : "./../images/bg/vogue.jpg",
-        desc : ""
+        desc : "HTML&CSS&JS를 기반으로한 세번째 프로젝트입니다. JS를 이용해 같은 HTML에서 주제에 맞는 데이터를 출력한 깔끔한 디자인의 프로젝트입니다."
     },
     {
         idx : '3',

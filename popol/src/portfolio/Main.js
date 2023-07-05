@@ -19,6 +19,14 @@ function Main(){
             opacity : 1
         })
         },10)
+
+        $(window).on('resize',function(){
+            console.log('리사이즈')
+            $('.bg').css({
+                transition : "none",
+                opacity : 1
+            })
+        })
     },[img])
 
     return(

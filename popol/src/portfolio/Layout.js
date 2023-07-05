@@ -24,14 +24,14 @@ function Layout(){
                 <nav>
                     <ul className='layout_header_ul'>
                         <li className='logo'>
-                            <Link to="/main">
+                            {/* <Link to="/main"> */}
                                 <img src='./../images/logo.png'/>
-                            </Link>
+                            {/* </Link> */}
                         </li>
                         <li className='menu'>
-                            <div>
+                            <button onClick={()=>{setPjsoga(1)}}> 
                                 MENU
-                            </div>
+                            </button>
                         </li>
                     </ul>
                 </nav>
@@ -41,9 +41,9 @@ function Layout(){
                 <Outlet />
             </main>
 
-            <footer id='footer'>
+            {/* <footer id='footer'>
                 푸터야!
-            </footer>
+            </footer> */}
 
 
 
@@ -59,7 +59,9 @@ function Layout(){
 
 
 
-
+            {
+                pjsoga == 1 &&
+            
 
             <aside className='side'>
                 <ul>
@@ -155,7 +157,9 @@ function Layout(){
                         </div>
                     </li>
                 </ul>
+                <div className='xbtn' onClick={()=>{setPjsoga(0)}}>×</div>
             </aside>
+            }
         </>
     )
 }

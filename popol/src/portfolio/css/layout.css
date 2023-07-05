@@ -14,10 +14,19 @@
         padding-top: 90px;
 }
 .menu{
+    position: relative;
+}
+.menu button{
+    position: absolute;
+    top: 0;
+    right: 0;
     color: white;
     font-weight: bold;
     font-size: 2.5vh;
-    padding-top: 45px;
+    margin-top: 45px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 #footer{
     position: absolute;
@@ -80,7 +89,7 @@
     margin: 2% 0;
 }
 .sogabtnbx{
-    margin-top: 2%;
+    margin-top: 3%;
     display: grid;
             /* 가로방향 12그리드 셋팅 */
             grid-template-columns: repeat(3, 1fr);
@@ -93,4 +102,17 @@
 .side button {
     color :white;
     background-color: transparent;
+}
+.descbx{
+    margin-top: 3%;
+    font-size: 2.2vw;
+}
+
+.xbtn{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 4vw;
+    color: white;
+    cursor: pointer;
 }
