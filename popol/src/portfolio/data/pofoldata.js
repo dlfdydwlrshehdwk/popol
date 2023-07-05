@@ -34,7 +34,7 @@ const pofoldata = [
     {
         idx : '5',
         title : 'VITA ARCHITECTURE',
-        address : '',
+        address : 'https://dlfdydwlrshehdwk.github.io/vitaarchitecture/',
         language : 'Vue.js',
         isrc : "./../images/bg/vita.jpg",
         desc : "Vue.js를 공부하며 만든 네번째 프로젝트입니다. 라우터를 이용한 화면이동 한 데이터를 이용하여 여러군대에 적용하여 만들었으며 아기자기하며 화려한 프로젝트입니다."
@@ -42,7 +42,7 @@ const pofoldata = [
     {
         idx : '6',
         title : 'ANDMARQ',
-        address : 'https://dlfdydwlrshehdwk.github.io/vitaarchitecture/',
+        address : 'https://dlfdydwlrshehdwk.github.io/andmarq/',
         language : 'React',
         isrc : "./../images/bg/and.jpg",
         desc : "React를 기반으로한 여섯번째 프로젝트입니다. React의 기능에 충실하여 만들었고 useState를이용한 상태관리 useParams와 Link를 이용한  데이터출력 useEffect를 이용한 함수호출 등 React의 기능에 충실하여 만든 프로젝트입니다."
@@ -50,7 +50,7 @@ const pofoldata = [
     {
         idx : '7',
         title : 'FILA',
-        address : '',
+        address : 'https://dlfdydwlrshehdwk.github.io/filaa/',
         language : 'React',
         isrc : "./../images/bg/fila.jpg",
         desc : "React를 기반으로한 일곱번째 프로젝트입니다. props를 이용해 하나의 컴포넌트를 다양하게 출력되도록 하였고 다양한 이벤트와 svg애니메이션을 이용하여 재미있는 연출을 구성한 재미있는 프로젝트이다."
