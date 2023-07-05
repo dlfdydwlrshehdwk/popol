@@ -8,7 +8,9 @@ function aa(){
 }
 function Layout(){
 
-    const [soga, setSoga] = useState([1,0])
+    const [soga, setSoga] = useState([1,1])
+    const [pjsoga , setPjsoga] = useState(0)
+    const [desc, setDesc] = useState('')
 
 
     useEffect(()=>{
@@ -34,14 +36,35 @@ function Layout(){
                     </ul>
                 </nav>
             </header>
+
             <main id='main'>
                 <Outlet />
             </main>
+
             <footer id='footer'>
                 푸터야!
             </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <aside className='side'>
                 <ul>
+
+                    {/* 소개글 */}
                     <li>
                         <div className='flexbx'>
                             <div>소개글</div>
@@ -62,7 +85,6 @@ function Layout(){
                                 }}>＋</div>
                             }
                         </div>
-
                         {
                             soga[0] == 1 &&
                             <div className='txtbx'>
@@ -78,9 +100,14 @@ function Layout(){
                     </li>
 
 
+
+
+
+
+
                     <li>
                         <div className='flexbx'>
-                            <div>나의 기술</div>
+                            <div>프로젝트 소개</div>
                             {
                                 soga[1] == 0 &&
                                 <div onClick={()=>{
@@ -100,13 +127,28 @@ function Layout(){
                         </div>
                         {
                             soga[1] == 1 &&
-                            <div className='txtbx'>
-                                <p>저는 그린컴퓨터 수료 어쩌구</p>
-                                <p>이정도 할줄암 어쩌구</p>
-                                <p>잡코리아주소</p>
+                            <div className='sogabtnbx'>
+                            {
+                                pofoldata.map((x,i)=>
+                                <button onClick={()=>{setDesc(i)}} key={i}>{x.title}</button>
+                                )
+                            }
                             </div>
                         }
+                        <div className='descbx'>
+                            {
+                                desc !== '' && soga[1] == 1 &&
+                                <span>{pofoldata[desc].desc}</span>
+                            }
+                        </div>
+
+
                     </li>
+
+
+
+
+                    {/* 연락처 */}
                     <li>
                         <div>
                             연락처 : fkrmsk147@naver.com

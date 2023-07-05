@@ -79,3 +79,18 @@
     font-size: 1.5vw;
     margin: 2% 0;
 }
+.sogabtnbx{
+    margin-top: 2%;
+    display: grid;
+            /* 가로방향 12그리드 셋팅 */
+            grid-template-columns: repeat(3, 1fr);
+            /* 세로방향 높이값 셋팅 */
+            /* grid-template-rows:  */
+            grid-row-gap: 15px;
+            /* 좌우갭 */
+            grid-column-gap: 10px;
+}
+.side button {
+    color :white;
+    background-color: transparent;
+}
