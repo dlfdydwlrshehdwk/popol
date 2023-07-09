@@ -25,7 +25,7 @@ function Layout(){
                     <ul className='layout_header_ul'>
                         <li className='logo'>
                             {/* <Link to="/main"> */}
-                                <img src='./../images/logo.png'/>
+                                <img src='./images/logo.png'/>
                             {/* </Link> */}
                         </li>
                         <li className='menu'>
