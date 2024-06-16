@@ -1,22 +1,46 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import "./css/layout.css"
+import './css/dim.css'
 import $ from 'jquery'
 import { useEffect, useState } from 'react';
 import pofoldata from './data/pofoldata';
-function aa(){
-    console.log($('.menu'))
-}
+import Dim from './Dim';
+
 function Layout(){
 
-    const [soga, setSoga] = useState([1,1])
-    const [pjsoga , setPjsoga] = useState(0)
-    const [desc, setDesc] = useState('')
-
+    const [soga, setSoga] = useState([1,1]) // INFO에서 - 버튼 + 버튼 구분
+    const [pjsoga , setPjsoga] = useState(0) // INFO 열고 닫고
+    const [desc, setDesc] = useState('') // 프로젝트 소개에서 작은거 누른거
+    const [dim, setDim] = useState(1) // dim 열고 닫고
 
     useEffect(()=>{
-        console.log(soga)
-    })
+        // 마우스 휠에 따른 네모리스트 이동
+        let i = 0;
+        $(window).on('wheel',function(e){
+          let wDelta = e.originalEvent.wheelDelta
+          if(dim) return;
+          if(wDelta < 0){
+            console.log('밑으로')
+            i++;
+            // 만약 ul을 100으로 나눈숫자보다 커진다면 그숫자+1 보다 작게 -> 스크롤이 일정부분 가면 멈추기 위해서 
+            let target = $('.main_flexwrap').innerWidth() / 100 - $('.main_flexwrap').innerWidth() / 100 / 10
 
+            if(i > target) i = target;
+          }
+          else{
+            console.log('위로')
+            i--;
+            // 만약 i가 0보다 작아진다면 i는 0
+            if(i < 0) i = 0;
+          }
+    
+          // 트랜스폼을 i * 100px로 셋팅 
+          $('.main_flexwrap').css({
+            transition : '.1s linear ',
+            transform : `translate(${(i * -100) + 'px'},-50%)`
+          })
+        })
+      },[dim])
 
     return(
         <>
@@ -24,14 +48,11 @@ function Layout(){
                 <nav>
                     <ul className='layout_header_ul'>
                         <li className='logo'>
-                            {/* <Link to="/main"> */}
-                                <img src='./../images/logo.png'/>
-                            {/* </Link> */}
+                            {/* 배포할때 이미지 경로 ./image/... */}
+                            <img src='./../images/logo.png'/>
                         </li>
                         <li className='menu'>
-                            <button onClick={()=>{setPjsoga(1)}}> 
-                                MENU
-                            </button>
+                            <button onClick={()=>{setPjsoga(1)}}>INFO</button>
                         </li>
                     </ul>
                 </nav>
@@ -41,31 +62,11 @@ function Layout(){
                 <Outlet />
             </main>
 
-            {/* <footer id='footer'>
-                푸터야!
-            </footer> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             {
-                pjsoga == 1 &&
+                pjsoga == 1 ?
             
-
             <aside className='side'>
                 <ul>
-
                     {/* 소개글 */}
                     <li>
                         <div className='flexbx'>
@@ -91,21 +92,12 @@ function Layout(){
                             soga[0] == 1 &&
                             <div className='txtbx'>
                                 <p>
-                                {pofoldata.length}개의 프로젝트로 이루어져있는
-                                </p>
-                                <p>
-                                김동호의 포트폴리오 사이트입니다.<br/>
-                                (프론트엔드 취업준비중)
+                                총 {pofoldata.length}개의 프로젝트로 이루어져있는<br/>
+                                김동호의 포트폴리오 사이트입니다.
                                 </p>
                             </div>
                         }
                     </li>
-
-
-
-
-
-
 
                     <li>
                         <div className='flexbx'>
@@ -143,12 +135,7 @@ function Layout(){
                                 <span>{pofoldata[desc].desc}</span>
                             }
                         </div>
-
-
                     </li>
-
-
-
 
                     {/* 연락처 */}
                     <li>
@@ -158,7 +145,10 @@ function Layout(){
                     </li>
                 </ul>
                 <div className='xbtn' onClick={()=>{setPjsoga(0)}}>×</div>
-            </aside>
+            </aside> : null
+            }
+            {
+                dim ? <Dim setDim={setDim}/> : null
             }
         </>
     )

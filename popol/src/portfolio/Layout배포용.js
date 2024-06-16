@@ -3,20 +3,16 @@ import "./css/layout.css"
 import $ from 'jquery'
 import { useEffect, useState } from 'react';
 import pofoldata from './data/pofoldata';
-function aa(){
-    console.log($('.menu'))
-}
+
 function Layout(){
 
     const [soga, setSoga] = useState([1,1])
     const [pjsoga , setPjsoga] = useState(0)
     const [desc, setDesc] = useState('')
 
-
     useEffect(()=>{
         console.log(soga)
     })
-
 
     return(
         <>
@@ -40,24 +36,6 @@ function Layout(){
             <main id='main'>
                 <Outlet />
             </main>
-
-            {/* <footer id='footer'>
-                푸터야!
-            </footer> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             {
                 pjsoga == 1 &&
@@ -101,12 +79,6 @@ function Layout(){
                         }
                     </li>
 
-
-
-
-
-
-
                     <li>
                         <div className='flexbx'>
                             <div>프로젝트 소개</div>
@@ -143,12 +115,7 @@ function Layout(){
                                 <span>{pofoldata[desc].desc}</span>
                             }
                         </div>
-
-
                     </li>
-
-
-
 
                     {/* 연락처 */}
                     <li>

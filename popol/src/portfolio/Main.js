@@ -12,7 +12,6 @@ function Main(){
     console.log(copy)
     let [img , setImg] = useState(0)
 
-
     useEffect(()=>{
     },[])
 
@@ -39,7 +38,6 @@ function Main(){
             <section className='main_wrap'>
                 <ul className='main_flexwrap'>
                     {
-                        // console.log(pofoldata)
                         copy.map((x,i)=>
                         <li key={i} className='main_flex_item' onMouseOver={()=>{setImg(i)}}>
                             <h4>{x.language}</h4>
